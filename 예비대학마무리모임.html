@@ -1,0 +1,818 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q1 &#8212; 예비대학</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "haesunbyun/precollege");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="예비대학 컴퓨팅" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">예비대학</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    예비대학 컴퓨팅
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  PYTHON
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Q1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/haesunbyun/precollege/blob/gh-pages/_sources/예비대학마무리모임.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/예비대학마무리모임.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Q1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q2">
+   Q2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q3-q4">
+   Q3, Q4
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q5">
+   Q5
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q6">
+   Q6
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q7">
+   Q7
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q8">
+   Q8
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   😄 문제 1. 온도변환 프로그램
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   😄 문제 2. 홀수 짝수 판단하기
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   😄 문제 3. 할아버지의 외침
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Q1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Q1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q2">
+   Q2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q3-q4">
+   Q3, Q4
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q5">
+   Q5
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q6">
+   Q6
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q7">
+   Q7
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q8">
+   Q8
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   😄 문제 1. 온도변환 프로그램
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   😄 문제 2. 홀수 짝수 판단하기
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   😄 문제 3. 할아버지의 외침
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="q1">
+<h1>Q1<a class="headerlink" href="#q1" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>한글 쓸 때 끝 글자가 두번 입력되거나 모든 한글이 두번씩 입력되거나 끝 글자가 지워지거나 하는 등의 입력이 불편할 때가 있다.</p></li>
+<li><p>운영체제(Operating system)의 IME(input method editor)의 문제인 것 같다. 사용자마다 컴퓨터 환경이 달라서(OS는 mac, 윈도우 등, 브라우저는 크롬, 엣지, 사파리 등)  정확한 원인과 해결 방법은 모르겠다(내 컴퓨터에서는 발생하지 않으니ㅜㅜ). 그래도 도움이 될만한 아래의 사이트를 참고해 시도해보세요.
+<a class="reference external" href="https://blog.naver.com/gamja321/223000791643">https://blog.naver.com/gamja321/223000791643</a></p></li>
+</ul>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="q2">
+<h1>Q2<a class="headerlink" href="#q2" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>변수명은 변수명 짓는 규칙에 따라 만들면 된다.</p></li>
+<li><p>파이썬에는 미리 기능을 만들어 놓은 내장함수들, 클래스들이 매우 많다.(예, print(), input(), str(), int(), …)</p></li>
+<li><p>간혹 내장함수명이나 클래스명을 변수명으로 사용하면, 예를들어</p>
+<ul>
+<li><p>print=’hello’</p></li>
+<li><p>input=input() 등
+이와 같이 작성하면 기존에 정의된 기능이 동작하지 않게 된다.</p></li>
+</ul>
+</li>
+<li><p>이를 해결하기 위해 메뉴 <code class="docutils literal notranslate"><span class="pre">런타임</span> <span class="pre">&gt;&gt;</span> <span class="pre">런타임</span> <span class="pre">다시</span> <span class="pre">시작</span></code>을 하면 된다.</p></li>
+<li><p>런타임 다시 시작은 <code class="docutils literal notranslate"><span class="pre">모든</span> <span class="pre">로컬</span> <span class="pre">변수를</span> <span class="pre">포함한</span> <span class="pre">런타임</span> <span class="pre">상태가</span> <span class="pre">삭제됩니다.</span></code>라는 경고 문구와 같이 현재 만들어 놓은 변수 등을 초기화 시킨다는 의미이다.</p></li>
+<li><p>따라서 올바르지 않은 변수명도 초기화 되어 기존의 내장함수나 클래스의 기능이 원래대로 복구된다.</p></li>
+<li><p>문제를 일으킨 변수명은 바로 삭제하는 것이 좋다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span>
+<span class="nb">str</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mf">9e13</span><span class="n">bd5b59ac</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">str</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">str</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: &#39;str&#39; object is not callable
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="q3-q4">
+<h1>Q3, Q4<a class="headerlink" href="#q3-q4" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>print()에서 +와 ,와 f-string의 출력 차이</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;홍길동&#39;</span>
+<span class="n">age</span><span class="o">=</span><span class="mi">20</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">홍길동님의</span> <span class="pre">나이는</span> <span class="pre">20살입니다.</span></code> 이와 같이 정확하게 출력하기를 원했을 때,</p></li>
+</ul>
+<ul class="simple">
+<li><p>‘+’연산자를 사용하는 경우, 변수 age가 정수형이므로 str()로 타입변환을 해줘야 한다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">나이는</span></code> 다음에 공백까지 생각해줘야 한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;홍길동&#39;</span>
+<span class="n">age</span><span class="o">=</span><span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39;님의 나이는&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;살 입니다.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39;님의 나이는 &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;살 입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>홍길동님의 나이는20살 입니다.
+홍길동님의 나이는 20살 입니다.
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>콤마(,)를 사용하는 경우, 콤마 있는 부분이 자동 한칸 띄어쓰기가 되므로 <code class="docutils literal notranslate"><span class="pre">20살</span></code>과 같이 나오게 하려면 sep=’’ 옵션을 줘서 띄어쓰기를 없애줘야 한다.</p></li>
+<li><p>이때 올바르게 띄어써준 부분까지 없애지기 때문에 일부러 공백을 넣어줘야 한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;님의 나이는&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s1">&#39;살 입니다.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;님의 나이는&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s1">&#39;살 입니다.&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;님의 나이는 &#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s1">&#39;살 입니다.&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>홍길동 님의 나이는 20 살 입니다.
+홍길동님의 나이는20살 입니다.
+홍길동님의 나이는 20살 입니다.
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>f-string으로 처리하는 것이 가장 편하다.</p></li>
+<li><p>출력하고자 하는 형태 그대로 만들고, <code class="docutils literal notranslate"><span class="pre">변수명</span></code>이나 <code class="docutils literal notranslate"><span class="pre">연산식</span></code> 또는 <code class="docutils literal notranslate"><span class="pre">함수호출</span></code> 등이 들어가야 할 자리에 {}를 씌어 넣어주면 된다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{name}</span><span class="s1">님의 나이는 </span><span class="si">{age}</span><span class="s1">살입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="q5">
+<h1>Q5<a class="headerlink" href="#q5" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>변수 여러개를 한 줄에 만들고 싶다면,</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+7
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="q6">
+<h1>Q6<a class="headerlink" href="#q6" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>input() 함수는 입력받은 값을 모두 문자열로 처리한다.</p></li>
+<li><p>아래의 코드에서 입력값으로 100을 입력했다면 조건식이 만족되어 <code class="docutils literal notranslate"><span class="pre">입력값은</span> <span class="pre">100입니다.</span></code>를 출력한다.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">()</span> 
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;100&#39;</span><span class="p">:</span> 
+  <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;입력값은 </span><span class="si">{a}</span><span class="s1">입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">()</span> 
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s1">&#39;100&#39;</span><span class="p">:</span> 
+  <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;입력값은 </span><span class="si">{a}</span><span class="s1">입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="q7">
+<h1>Q7<a class="headerlink" href="#q7" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>for 다음에 오는 변수는 in 다음에 오는 반복가능한 범위의 값을 처음부터 끝까지 차례대로 순회하여 갖는다.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mine</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;컴퓨터&#39;</span><span class="p">,</span> <span class="s1">&#39;노트북&#39;</span><span class="p">,</span> <span class="s1">&#39;딸기&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">my</span> <span class="ow">in</span> <span class="n">mine</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">my</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mine</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;컴퓨터&#39;</span><span class="p">,</span> <span class="s1">&#39;노트북&#39;</span><span class="p">,</span> <span class="s1">&#39;딸기&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">my</span> <span class="ow">in</span> <span class="n">mine</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">my</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="q8">
+<h1>Q8<a class="headerlink" href="#q8" title="Permalink to this headline">#</a></h1>
+<p>슬라이싱(Slicing)이란 리스트의 아이템 일부를 자르는 것이다. 형식은 다음과 같다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">리스트변수</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>start: 시작 인덱스, 디폴트는 step이 양수이면 인덱스 0, step이 음수이면 인덱스 -1이다.</p></li>
+<li><p>end: 끝 인덱스+1</p></li>
+<li><p>step: 이동간격, 양수이면 오른쪽으로 step만큼 이동한다. 음수이면 왼쪽으로 step만큼 이동한다.</p></li>
+<li><p>start, end, step 모두 생략 가능하다.</p></li>
+</ul>
+<ul class="simple">
+<li><p>아래의 코드를 통해 실습해보자.</p></li>
+<li><p>시작 인덱스의 생략으로 처음부터 인덱스 3 이전까지 오른쪽으로 이동하여 슬라이싱한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shape</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;turtle&#39;</span><span class="p">,</span> <span class="s1">&#39;arrow&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">[</span> <span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;turtle&#39;, &#39;arrow&#39;, &#39;circle&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>끝 인덱스의 생략으로 인덱스 -3부터 끝까지 오른쪽으로 이동하여 슬라이싱한다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shape</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;turtle&#39;</span><span class="p">,</span> <span class="s1">&#39;arrow&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span> <span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;circle&#39;, &#39;square&#39;, &#39;diamond&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>시작 인덱스의 생략으로 처음부터 -3 이전까지 오른쪽으로 이동하여 슬라이싱한다.</p></li>
+<li><p>이때 시작의 위치가 인덱스 0이므로 -3 이전은 ‘arrow’가 된다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shape</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;turtle&#39;</span><span class="p">,</span> <span class="s1">&#39;arrow&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>처음부터 -3 이전까지 왼쪽으로 이동하여 슬라이싱한다.</p></li>
+<li><p>이때 시작의 위치가 인덱스 -1이므로 -3 이전은 ‘square’가 된다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shape</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;turtle&#39;</span><span class="p">,</span> <span class="s1">&#39;arrow&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>step은 1이고 시작 인덱스, 끝 인덱스의 생략으로 처음부터 끝까지이므로 shape[ : ]와 같다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shape</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;turtle&#39;</span><span class="p">,</span> <span class="s1">&#39;arrow&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">[::</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shape</span><span class="p">[:])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>😄 문제 1. 온도변환 프로그램<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<p>화씨온도를 입력받아 섭씨온도로, 섭씨온도를 입력받아 화씨온도로 변환하는 프로그램을 작성하시오.
+^^^</p>
+<p>섭씨온도: <span class="math notranslate nohighlight">\(\frac{5}{9}(화씨온도-32.0)\)</span></p>
+<p>화씨온도: <span class="math notranslate nohighlight">\(\frac{9}{5}섭씨온도-32.0\)</span></p>
+<p><font color='blue'><code class="docutils literal notranslate"><span class="pre">test</span> <span class="pre">case-1</span></code></font></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>온도 변환 프로그램
+화씨 온도를 입력하세요:50
+섭씨 온도는 10.0 입니다.
+
+섭씨 온도를 입력하세요:50
+화씨 온도는 122.0 입니다.
+</pre></div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id2">
+<h1>😄 문제 2. 홀수 짝수 판단하기<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h1>
+<p>숫자를 입력 받아 짝수인지 홀수인지 검사하는 프로그램을 작성하시오.
+^^^</p>
+<p><font color='blue'><code class="docutils literal notranslate"><span class="pre">test</span> <span class="pre">case-1</span></code></font></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Input number: 15
+홀수입니다.
+</pre></div>
+</div>
+<p><font color='blue'><code class="docutils literal notranslate"><span class="pre">test</span> <span class="pre">case-2</span></code></font></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Input number: 20
+짝수입니다.
+</pre></div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id3">
+<h1>😄 문제 3. 할아버지의 외침<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h1>
+<p>다음과 같이 출력하는 코드를 반복문을 이용해 작성해 보시오.
+^^^</p>
+<p><font color='blue'><code class="docutils literal notranslate"><span class="pre">test</span> <span class="pre">case-1</span></code></font></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>몇 번 외칠까? 3
+할아버지가 1번 외쳤다. 무야호~
+할아버지가 2번 외쳤다. 무야호~무야호~
+할아버지가 3번 외쳤다. 무야호~무야호~무야호~
+</pre></div>
+</div>
+<p><font color='blue'><code class="docutils literal notranslate"><span class="pre">test</span> <span class="pre">case-2</span></code></font></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>몇 번 외칠까? 5
+할아버지가 1번 외쳤다. 무야호~
+할아버지가 2번 외쳤다. 무야호~무야호~
+할아버지가 3번 외쳤다. 무야호~무야호~무야호~
+할아버지가 4번 외쳤다. 무야호~무야호~무야호~무야호~
+할아버지가 5번 외쳤다. 무야호~무야호~무야호~무야호~무야호~
+</pre></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">예비대학 컴퓨팅</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By hs Byun<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
